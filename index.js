@@ -1,6 +1,6 @@
 $("#slideshow > div:gt(0)").hide();
 
-setInterval(function() { 
+setInterval("DOMContentLoaded", function() { 
   $('#slideshow > div:first')
     .fadeOut(1000)
     .next()
