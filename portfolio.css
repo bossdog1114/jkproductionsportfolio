@@ -47,11 +47,84 @@ table {
 	border-spacing: 0;
 }
 
+
+/*begin design*/
+
+
 *{
-    text-align: center;
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  max-width:100%;
 }
-.index{
-    background-image: url("https://images.unsplash.com/photo-1496674205429-924b32acd421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+.navbar  {
+  font-family: 'Anton', sans-serif;
+  color: whitesmoke;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #808080; 
+  background: -moz-linear-gradient(top, #3f4c6b 0%, #606c88 100%); 
+  background: -webkit-linear-gradient(top, #3f4c6b 0%,#606c88 100%); 
+  background: linear-gradient(to bottom, #3f4c6b 0%,#606c88 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#606c88',GradientType=0 ); 
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-quote {
+  font-family: 'Anton', sans-serif;
+  color: whitesmoke;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  /* text-align: center; */
+  /* display: inline-block; */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+.index body{
+    background-image: url("assets/bg\ image\ .jpg");
     background-size: cover;
     background-position: absolute;
     background-repeat: no repeat;
@@ -59,7 +132,7 @@ table {
 } 
 
 .projects body{
-  background-image: url("./assets/Create.png");
+  background-image: url("");
   background-size: cover;
   background-position: absolute;
   background-repeat: no repeat;
@@ -70,19 +143,42 @@ table {
   text-align: center;
 }
 
-
-
 .resume body{
-  background-image: url("https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80");
+  background-image: url("assets/bg\ resume\ page.jpg");
   background-size: cover;
   background-position: absolute;
   background-repeat: no repeat;
   background-attachment: fixed;
 }
 
-.container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+.container-proj-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: 'Arvo', serif;
+  color: whitesmoke;
+  font-size: 30px;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+      1px 1px 0 #000;  
+  margin-bottom: 0;
+  padding-bottom: 0; 
+}
+
+.playlist-links {
+  font-family: 'Arvo', serif;
+  text-align: center;
+  color: whitesmoke;
+  /* font-size: 30px; */
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+      1px 1px 0 #000;  
+  margin-bottom: 0;
+  padding-bottom: 1rem; 
 }
 
 .email {
@@ -96,7 +192,40 @@ table {
 }
 
 .form {
+  text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  margin-top: 130px;
+  margin-bottom: 130px;
   border-right: 100px;
+  color: whitesmoke;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  list-style-type: none;
+  overflow: hidden;
+  background: #808080; 
+  background: -moz-linear-gradient(top, #3f4c6b 0%, #606c88 100%); 
+  background: -webkit-linear-gradient(top, #3f4c6b 0%,#606c88 100%); 
+  background: linear-gradient(to bottom, #3f4c6b 0%,#606c88 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#606c88',GradientType=0 ); 
+}
+
+form div + div {
+  margin-top: 25px;
+}
+
+.resumeiframe {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  width: 150rem;
+  height: 40rem;
 }
 
 .name {
@@ -125,37 +254,25 @@ table {
   padding-bottom: 0;  
 }
 
-.title {
-  font-family: 'Arvo', serif;
-  color: whitesmoke;
-  font-size: 30px;
-  text-shadow:
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-      1px 1px 0 #000;  
-  margin-bottom: 0;
-  padding-bottom: 0;  
-}
-
-.col-md-4 {
+/* .col-md-4 {
   background-color: #808080;
   width: 300px;
   margin: auto;
   padding-bottom: 15px;
-}
+} */
 
-.col-md-4-home {
+/* .col-md-4-home {
   width: 300px;
   margin: auto;
   padding-bottom: 15px;
   margin-top: 15px;
   padding-top: 0px;
   display: inline-block;
-}
+} */
 
-.web{
+/* .web{
     font-family: 'Permanent Marker', cursive;
+    text-align: center;
     font-size: 61px;
     color: whitesmoke;
     text-shadow:
@@ -164,9 +281,10 @@ table {
 		-1px 1px 0 #000,
         1px 1px 0 #000; 
     margin-top: 0;   
-}
+} */
 
 #trouble {
+  text-align: center;
   background-color: #43506F;
   font-family: 'Arvo', serif;
   color: whitesmoke;
@@ -180,52 +298,8 @@ table {
   padding-bottom: 0;  
 }
 
-ul {
-    font-family: 'Anton', sans-serif;
-    text-align: center;
-    color: whitesmoke;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #3f4c6b; 
-    background: -moz-linear-gradient(top, #3f4c6b 0%, #606c88 100%); 
-    background: -webkit-linear-gradient(top, #3f4c6b 0%,#606c88 100%); 
-    background: linear-gradient(to bottom, #3f4c6b 0%,#606c88 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#606c88',GradientType=0 ); 
-  }
-
-  .quote{
-    float: left;
-    padding-top: 15px;
-    padding-left: 5px;
-    font-size: 20px;
-    overflow: hidden;
-    border-right: 15em;
-    white-space: nowrap;
-    letter-spacing: .15em;
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 41% }
-  }
-
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
-
   
-  li { 
+  /* li { 
     float: right;
   }
   
@@ -239,22 +313,8 @@ ul {
   
   li a:hover {
     background-color: #111;
-  }
+  } */
 
-  form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    background: gray;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-    margin-top: 130px;
-    margin-bottom: 130px;
-  }
-  
-  form div + div {
-    margin-top: 25px;
-  }
   
   label {
     display: inline-block;
@@ -280,6 +340,9 @@ ul {
   
   .button {
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
   }
   
   button {
@@ -292,10 +355,6 @@ ul {
 
   .aboutmepic {
     padding-bottom: 100px;
-  }
-  
-  .resumeiframe {
-    padding-left: 10px;
   }
 
 
@@ -318,4 +377,70 @@ ul {
     background: -webkit-linear-gradient(top, #3f4c6b 0%,#606c88 100%); 
     background: linear-gradient(to bottom, #3f4c6b 0%,#606c88 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#606c88',GradientType=0 ); 
+  }
+
+  .fa-github-square {
+    color: #E94F32;
+  }
+
+  .fa-linkedin-square {
+    color:#0C61C0;
+  }
+
+  .label-container{
+    position:fixed;
+    bottom:48px;
+    right:105px;
+    display:table;
+    visibility: hidden;
+  }
+  
+  .label-text{
+    color:#FFF;
+    background:rgba(51,51,51,0.5);
+    display:table-cell;
+    vertical-align:middle;
+    padding:10px;
+    border-radius:3px;
+  }
+  
+  .label-arrow{
+    display:table-cell;
+    vertical-align:middle;
+    color:#333;
+    opacity:0.5;
+  }
+  
+  .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color: red;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+  }
+  
+  .my-float{
+    font-size:24px;
+    margin-top:18px;
+  }
+  
+  a.float + div.label-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+  }
+  
+  a.float:hover + div.label-container{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .demo {
+    text-align: center;
+    padding-top: 1rem;
   }
