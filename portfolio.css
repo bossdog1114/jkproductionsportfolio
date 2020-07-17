@@ -124,15 +124,65 @@ li a:hover {
 }
 
 .index body{
-    background-image: url("assets/bg\ image\ .jpg");
+    background-color: lightgray;
     background-size: cover;
     background-position: absolute;
     background-repeat: no repeat;
     background-attachment: fixed;
 } 
 
+.intro {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: black;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+hr {
+  outline: 1px solid black;
+}
+
+.aboutpar { 
+  font-size: 1.5rem;
+  font-family: 'Anton', sans-serif;
+  color: black;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.about {
+  background-color: lightgray;
+}
+
+.aboutimg {
+  display: flex;
+  flex-direction: row;
+}
+
+.work {
+  outline: solid 1px black;
+  margin-top: 17rem;
+  margin-left: .5rem;
+  height: 30rem;
+  width: 40rem;
+}
+
+.monday {
+  font-size: 1.5rem;
+  font-family: 'Anton', sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .projects body{
-  background-image: url("");
+  background-color: lightgray;
   background-size: cover;
   background-position: absolute;
   background-repeat: no repeat;
@@ -140,6 +190,7 @@ li a:hover {
 }
 
 .icon {
+  margin-top: 5rem;
   text-align: center;
 }
 
@@ -306,12 +357,9 @@ form div + div {
     margin-left: .5em;
   }
 
-  .mypic {
-    padding-right: 200px;
-  }
 
   .aboutmepic {
-    padding-bottom: 100px;
+    padding-top: .5rem;
   }
 
   .footer{
@@ -326,7 +374,6 @@ form div + div {
 		1px 1px 0 #000;
     list-style-type: none;
     margin: 0;
-    margin-top: 12rem;
     padding: 0;
     overflow: hidden;
     background: #808080; 
@@ -606,6 +653,27 @@ form div + div {
     }
 
     .column {
+      display: none;
+    }
+
+    .aboutimg {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro {
+      font-size: 2rem;
+    }
+
+    .aboutpar {
+      font-size: 1rem;
+    }
+
+    .monday {
+      font-size: 1rem;
+    }
+
+    .work {
       display: none;
     }
 }
